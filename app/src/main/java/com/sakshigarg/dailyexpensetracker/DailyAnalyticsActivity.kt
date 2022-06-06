@@ -250,6 +250,7 @@ class DailyAnalyticsActivity : AppCompatActivity() {
                     }
                     personalRef.child("dayOther").setValue(totalAmount)
                 }else{
+                    personalRef.child("dayOther").setValue(0)
                     linearLayoutOther.visibility = View.GONE
                 }
 
@@ -288,6 +289,7 @@ class DailyAnalyticsActivity : AppCompatActivity() {
                     }
                     personalRef.child("dayPer").setValue(totalAmount)
                 }else{
+                    personalRef.child("dayPer").setValue(0)
                     linearLayoutPersonal.visibility = View.GONE
                 }
 
@@ -326,6 +328,7 @@ class DailyAnalyticsActivity : AppCompatActivity() {
                     }
                     personalRef.child("dayHea").setValue(totalAmount)
                 }else{
+                    personalRef.child("dayHea").setValue(0)
                     linearLayoutHealth.visibility = View.GONE
                 }
 
@@ -364,6 +367,7 @@ class DailyAnalyticsActivity : AppCompatActivity() {
                     }
                     personalRef.child("dayApp").setValue(totalAmount)
                 }else{
+                    personalRef.child("dayApp").setValue(0)
                     linearLayoutApparel.visibility = View.GONE
                 }
 
@@ -402,6 +406,7 @@ class DailyAnalyticsActivity : AppCompatActivity() {
                     }
                     personalRef.child("dayCha").setValue(totalAmount)
                 }else{
+                    personalRef.child("dayCha").setValue(0)
                     linearLayoutCharity.visibility = View.GONE
                 }
 
@@ -440,6 +445,7 @@ class DailyAnalyticsActivity : AppCompatActivity() {
                     }
                     personalRef.child("dayEdu").setValue(totalAmount)
                 }else{
+                    personalRef.child("dayEdu").setValue(0)
                     linearLayoutEducation.visibility = View.GONE
                 }
 
@@ -479,6 +485,7 @@ class DailyAnalyticsActivity : AppCompatActivity() {
                     personalRef.child("dayEnt").setValue(totalAmount)
                 }else{
                     linearLayoutEntertainment.visibility = View.GONE
+                    personalRef.child("dayEnt").setValue(0)
                 }
 
             }
@@ -516,6 +523,7 @@ class DailyAnalyticsActivity : AppCompatActivity() {
                     }
                     personalRef.child("dayHouse").setValue(totalAmount)
                 }else{
+                    personalRef.child("dayHouse").setValue(0)
                     linearLayoutHouse.visibility = View.GONE
                 }
 
@@ -554,6 +562,7 @@ class DailyAnalyticsActivity : AppCompatActivity() {
                     }
                     personalRef.child("dayFood").setValue(totalAmount)
                 }else{
+                    personalRef.child("dayFood").setValue(0)
                     linearLayoutFood.visibility = View.GONE
                 }
 
@@ -592,6 +601,7 @@ class DailyAnalyticsActivity : AppCompatActivity() {
                     }
                     personalRef.child("dayTrans").setValue(totalAmount)
                 }else{
+                    personalRef.child("dayTrans").setValue(0)
                     linearLayoutTransport.visibility = View.GONE
                 }
 

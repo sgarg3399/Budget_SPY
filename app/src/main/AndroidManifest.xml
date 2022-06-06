@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DailyExpenseTracker">
         <activity
+            android:name=".ForgotPass"
+            android:exported="true" />
+        <activity
             android:name=".AccountActivity"
             android:exported="true" />
         <activity

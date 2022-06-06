@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Daily Expense Tracker</string>
+    <string name="app_name">Budget SPY</string>
     <string name="Appname">Budget SPY</string>
     <string name="rupee">\u20B9</string>
     <string name="zerorupee">\u20B9 0</string>

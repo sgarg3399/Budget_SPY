@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var pass:EditText
     private lateinit var loginbtn:Button
     private lateinit var loginQn:TextView
+    private lateinit var forgotPass:TextView
     private lateinit var mAuth:FirebaseAuth
     private lateinit var authStateListener: FirebaseAuth.AuthStateListener
 
@@ -34,6 +35,7 @@ class LoginActivity : AppCompatActivity() {
         loginQn= findViewById(R.id.signup)
         mAuth = FirebaseAuth.getInstance()
         progressDialog = ProgressDialog(this)
+        forgotPass = findViewById(R.id.forgot_pass)
 
         authStateListener = FirebaseAuth.AuthStateListener {
 
@@ -47,6 +49,10 @@ class LoginActivity : AppCompatActivity() {
 
             }
 
+        }
+
+        forgotPass.setOnClickListener {
+            startActivity(Intent(this,ForgotPass::class.java))
         }
 
         loginQn.setOnClickListener {
