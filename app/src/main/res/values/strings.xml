@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Daily Expense Tracker</string>
+    <string name="Appname">Budget SPY</string>
+    <string name="rupee">\u20B9</string>
+    <string name="zerorupee">\u20B9 0</string>
+    <string-array name="items">
+        <item>Select item</item>
+        <item>Transport</item>
+        <item>Food</item>
+        <item>House</item>
+        <item>Entertainment</item>
+        <item>Education</item>
+        <item>Charity</item>
+        <item>Apparel</item>
+        <item>Health</item>
+        <item>Personal</item>
+
+        <item>Other</item>
+
+    </string-array>
+    <string name="week">This Week</string>
+    <string name="month">This Month</string>
+    <string name="status">Status</string>
+    <string name="today">Today</string>
+    <string name="this_month">This month</string>
+</resources>

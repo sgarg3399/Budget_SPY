@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/drawable-v24/ui_gradient.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/drawable/borders.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/drawable/button_bg.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/drawable/ic_person.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/drawable/ui_gradient.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_account.xml" value="0.15625" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_budget.xml" value="0.1621376811594203" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_choose_analytic.xml" value="0.1539855072463768" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_daily_analytics.xml" value="0.22934472934472935" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_history.xml" value="0.15625" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_login.xml" value="0.15081521739130435" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_monthly_analytics.xml" value="0.22268326417704012" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_register.xml" value="0.15081521739130435" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_splash.xml" value="0.10144927536231885" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_today_spending.xml" value="0.14447463768115942" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_week_spending.xml" value="0.13949275362318841" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/activity_weekly_analytics.xml" value="0.22934472934472935" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/input_layout.xml" value="0.1621376811594203" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/retrieve_layout.xml" value="0.15353260869565216" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/layout/update_layout.xml" value="0.22" />
+        <entry key="..\:/Users/SAKSHI GARG/AndroidStudioProjects/DailyExpenseTracker/app/src/main/res/menu/menu.xml" value="0.16770833333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
