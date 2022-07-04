@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgimage"
+    android:background="@drawable/ui_gradient"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -16,21 +23,22 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
+
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/table"
-        android:paddingHorizontal="10dp"
-        android:layout_below="@id/toolbar">
+        android:background="@color/black">
         <TableRow>
             <TextView
+                android:background="@drawable/borders"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Budget"
                 android:textColor="#fff"
                 android:gravity="center"
-                android:background="@drawable/borders"
                 android:padding="5dp"
                 android:textSize="12sp"
                 android:textStyle="bold"/>
@@ -145,11 +153,28 @@
         </TableRow>
     </TableLayout>
 
+    <TextView
+        android:id="@+id/spent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/aref_ruqaa"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/anyChartView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp" />
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/table">
+        android:layout_height="match_parent">
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -179,6 +204,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="40dp"
                     android:layout_gravity="center_vertical|center_horizontal">
 
                     <ImageView
@@ -216,6 +242,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="40dp"
                     android:layout_gravity="center_vertical|center_horizontal">
 
                     <ImageView
@@ -253,6 +280,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="40dp"
                     android:layout_gravity="center_vertical|center_horizontal">
 
                     <ImageView
@@ -290,6 +318,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="40dp"
                     android:layout_gravity="center_vertical|center_horizontal">
 
                     <ImageView
@@ -327,6 +356,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="40dp"
                     android:layout_gravity="center_vertical|center_horizontal">
 
                     <ImageView
@@ -364,6 +394,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="40dp"
                     android:layout_gravity="center_vertical|center_horizontal">
 
                     <ImageView
@@ -397,4 +428,6 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-</RelativeLayout>
+</LinearLayout>
+
+</ScrollView>

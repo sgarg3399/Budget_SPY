@@ -177,13 +177,10 @@ class DailyAnalyticsActivity : AppCompatActivity() {
         getTotalDayOtherExpense()
 
         getTotalDaySpending()
-//        loadGraph()
-//        setStatusAndImageResource()
 
-        Timer().schedule(timerTask {
             loadGraph()
             setStatusAndImageResource()
-        }, 2000)
+
 
 
     }

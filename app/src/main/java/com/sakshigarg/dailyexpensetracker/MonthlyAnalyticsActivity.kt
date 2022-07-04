@@ -177,10 +177,9 @@ class MonthlyAnalyticsActivity : AppCompatActivity() {
 
         getTotalWeekSpending()
 
-        Timer().schedule(timerTask {
             loadGraph()
             setStatusAndImageResource()
-        }, 2000)
+
     }
 
     private fun getTotalWeekSpending() {
