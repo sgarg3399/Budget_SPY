@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -54,7 +55,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var remainingBudgetTV:TextView
     private lateinit var anyChartView: PieChart
     private lateinit var spent: TextView
+    private lateinit var username: TextView
     private lateinit var cld:ConnectionLiveData
+    private lateinit var userDbRef: DatabaseReference
 
     private  var totalAmountMonth=0
     private  var totalAmountBudget=0
@@ -82,15 +85,16 @@ class MainActivity : AppCompatActivity() {
         monthBtn = findViewById(R.id.monthIv)
         analyticsBtn = findViewById(R.id.analyticsIv)
         toolbar = findViewById(R.id.toolbar)
+        username = findViewById(R.id.username)
         setSupportActionBar(toolbar)
         spent = findViewById(R.id.spent)
         supportActionBar!!.setTitle("Budget Spy")
 
-        budgetTV = findViewById(R.id.budgetTv)
-        monthSpendingTV = findViewById(R.id.monthTv)
-        weekSpendingTV = findViewById(R.id.weekTv)
-        todaySpendingTV = findViewById(R.id.todayTv)
-        remainingBudgetTV = findViewById(R.id.savingsTv)
+        budgetTV = findViewById(R.id.budgetTV)
+//        monthSpendingTV = findViewById(R.id.monthTv)
+//        weekSpendingTV = findViewById(R.id.weekTv)
+//        todaySpendingTV = findViewById(R.id.todayTv)
+        remainingBudgetTV = findViewById(R.id.savingTV)
         weekCardView = findViewById(R.id.weekCardView)
         monthCardView = findViewById(R.id.monthCardView)
         analyticsCardView = findViewById(R.id.analyticsCardView)
@@ -98,6 +102,7 @@ class MainActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
         onlineUserID= FirebaseAuth.getInstance().currentUser!!.uid
+
         budgetRef=FirebaseDatabase.getInstance().getReference("budget").child(onlineUserID)
         expensesRef=FirebaseDatabase.getInstance().getReference("expenses").child(onlineUserID)
         personalRef=FirebaseDatabase.getInstance().getReference("personal").child(onlineUserID)
@@ -105,6 +110,22 @@ class MainActivity : AppCompatActivity() {
         budgetCardView = findViewById(R.id.budgetCardView)
         todayCardView = findViewById(R.id.todayCardView)
         historyCardView = findViewById(R.id.historyCardView)
+
+        userDbRef = FirebaseDatabase.getInstance().getReference().child("users").child(onlineUserID)
+
+        userDbRef.addValueEventListener( object: ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val name= snapshot.child("name").getValue(String::class.java)!!
+                username.setText("Welcome "+name+" !")
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.d("TAG", error.getMessage())
+            }
+        }
+
+        )
 
         checkNetworkConnection();
 
@@ -240,7 +261,12 @@ class MainActivity : AppCompatActivity() {
 
                     var savings = budget-monthSpending
                     val rupee = resources.getString(R.string.rupee)
-                    remainingBudgetTV.setText(rupee+savings)
+                    remainingBudgetTV.setText("Savings: "+rupee+savings)
+                    if(savings>monthSpending)
+                        remainingBudgetTV.setCompoundDrawablesWithIntrinsicBounds(R.drawable.upwardarrow, 0, 0, 0);
+                    else
+                        remainingBudgetTV.setCompoundDrawablesWithIntrinsicBounds(R.drawable.downward_arrow, 0, 0, 0);
+
                 }
 
 
@@ -273,7 +299,7 @@ class MainActivity : AppCompatActivity() {
                     totalAmount+=pTotal
 
                     val rupee = resources.getString(R.string.rupee)
-                    weekSpendingTV.setText(rupee+totalAmount)
+                   // weekSpendingTV.setText(rupee+totalAmount)
                 }
                 personalRef.child("week").setValue(totalAmount)
 
@@ -307,7 +333,7 @@ class MainActivity : AppCompatActivity() {
                     totalAmount+=pTotal
 
                     val rupee = resources.getString(R.string.rupee)
-                    monthSpendingTV.setText(rupee+totalAmount)
+                  //  monthSpendingTV.setText(rupee+totalAmount)
                     spent.setText("You have spent  "+rupee+totalAmount+" this month")
                 }
                 personalRef.child("month").setValue(totalAmount)
@@ -347,7 +373,7 @@ class MainActivity : AppCompatActivity() {
                     var pTotal:Int = Integer.parseInt(total.toString())
                     totalAmount+=pTotal
                     val rupee = resources.getString(R.string.rupee)
-                    todaySpendingTV.setText(rupee+totalAmount)
+                   // todaySpendingTV.setText(rupee+totalAmount)
                 }
                 personalRef.child("today").setValue(totalAmount)
 
@@ -376,7 +402,7 @@ class MainActivity : AppCompatActivity() {
                         totalAmount+= data?.amount!!
 
 
-                        budgetTV.setText(rupee+totalAmount.toString())
+                        budgetTV.setText("Budget: "+rupee+totalAmount.toString())
 
                     }
 
